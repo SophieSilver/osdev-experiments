@@ -1,12 +1,16 @@
 [package]
-name = "osdev"
+name = "os"
 version = "0.1.0"
 edition = "2021"
+build = "build.rs"
 
-[dependencies]
+[[bin]]
+name = "qemu_runner"
+path = "qemu_runner/main.rs"
 
-[profile.dev]
-panic = "abort"
 
-[profile.release]
-panic = "abort"
+[build-dependencies]
+bootloader = "0.11.7"
+
+kernel = { path = "kernel", artifact  = "bin", target = "x86_64-unknown-none" }
+
