@@ -1,0 +1,5 @@
+[build]
+target = ".cargo/x86_64-osdev-unknown.json"
+
+[unstable]
+build-std = ["core"]
