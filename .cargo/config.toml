@@ -1,5 +1,6 @@
 [build]
-target = ".cargo/x86_64-osdev-unknown.json"
+target = "x86_64-osdev-unknown.json"
 
 [unstable]
-build-std = ["core"]
+build-std-features = ["compiler-builtins-mem"]
+build-std = ["core", "compiler_builtins"]
